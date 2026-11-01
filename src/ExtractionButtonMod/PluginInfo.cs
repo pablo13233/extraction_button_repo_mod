@@ -18,7 +18,7 @@ namespace ExtractionButtonMod
         /// <summary>
         /// Semantic version of the plugin.
         /// </summary>
-        public const string PluginVersion = "1.0.0";
+        public const string PluginVersion = "1.0.1";
     }
 }
 

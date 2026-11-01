@@ -1,7 +1,7 @@
 {
   "name": "ExtractionButtonConfirm",
-  "version_number": "1.0.0",
-  "website_url": "",
+  "version_number": "1.0.1",
+  "website_url": "https://github.com/pablo13233/extraction_button_repo_mod/tree/main",
   "description": "Evita que los puntos de extracción se envíen solos al llegar a la cuota y añade confirmación manual por botón físico igual que en la tienda.",
   "dependencies": [
     "BepInEx-BepInExPack-5.4.2100"

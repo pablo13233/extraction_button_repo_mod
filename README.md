@@ -8,6 +8,9 @@
 
 ## 🇬🇧 English
 
+* 🐛 **Feedback & Bug Reports (GitHub):** [https://github.com/pablo13233/extraction_button_repo_mod/tree/main](https://github.com/pablo13233/extraction_button_repo_mod/tree/main) — Feel free to share feedback or report any bugs/issues you find!
+* ☕ **Donations & Support (Ko-fi):** [https://ko-fi.com/pablo13233](https://ko-fi.com/pablo13233) — If you enjoy the mod and want to support its development, donations are greatly appreciated!
+
 Tired of the extraction platform triggering automatically right when you were about to put more valuables inside?
 
 **Extraction Button Confirm** brings the confirmation button mechanic from the **Shop** into all regular gameplay levels. Extractions will **never trigger automatically** upon reaching the haul goal: you and your team decide the exact moment to extract by pressing the confirmation button.
@@ -35,6 +38,9 @@ Tired of the extraction platform triggering automatically right when you were ab
 <a name="español"></a>
 
 ## 🇪🇸 Español
+
+* 🐛 **Feedback y reporte de errores (GitHub):** [https://github.com/pablo13233/extraction_button_repo_mod/tree/main](https://github.com/pablo13233/extraction_button_repo_mod/tree/main) — ¡Aquí puedes dejar tus comentarios, sugerencias o reportar cualquier error que hayas encontrado!
+* ☕ **Donaciones y apoyo (Ko-fi):** [https://ko-fi.com/pablo13233](https://ko-fi.com/pablo13233) — Si te gusta el mod y deseas apoyar su desarrollo, ¡cualquier donación se agradece muchísimo!
 
 ¿Cansado de que la plataforma de extracción se active sola justo cuando ibas a meter más objetos valiosos?
 

@@ -16,6 +16,7 @@ namespace ExtractionButtonMod.Services
     {
         private readonly ModConfig _config;
         private readonly ManualLogSource _logger;
+        private readonly ShopPedestalPlacementService _placementService;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ExtractionConfirmationService"/> class.
@@ -26,11 +27,12 @@ namespace ExtractionButtonMod.Services
         {
             _config = config ?? throw new ArgumentNullException(nameof(config));
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
+            _placementService = new ShopPedestalPlacementService(_logger);
         }
 
         /// <summary>
         /// Handles <c>ExtractionPoint.ShopSetup()</c>. When the Shop pedestal button mode is enabled in
-        /// standard levels, prevents <c>shopStation</c> from being destroyed.
+        /// standard levels, prevents <c>shopStation</c> from being destroyed and initializes smart placement.
         /// </summary>
         /// <param name="instance">The <see cref="ExtractionPoint"/> instance.</param>
         /// <returns><see langword="true"/> to execute original <c>ShopSetup</c>; <see langword="false"/> to skip it.</returns>
@@ -50,6 +52,7 @@ namespace ExtractionButtonMod.Services
             if (instance.shopStation != null)
             {
                 instance.shopStation.gameObject.SetActive(true);
+                _placementService.InitializePlacement(instance);
             }
 
             return false;
@@ -90,17 +93,28 @@ namespace ExtractionButtonMod.Services
 
         /// <summary>
         /// Re-enables and illuminates the main button on the <see cref="ExtractionPoint"/> once the tube
-        /// has fully raised in <see cref="ExtractionPoint.State.Active"/> so players can press it to confirm extraction.
+        /// has fully raised in <see cref="ExtractionPoint.State.Active"/> so players can press it to confirm extraction,
+        /// and verifies pedestal placement on activation.
         /// </summary>
         /// <param name="instance">The <see cref="ExtractionPoint"/> instance.</param>
         public void UpdateMainButtonInActiveState(ExtractionPoint instance)
         {
-            if (!_config.Enabled.Value || ExtractionPointAccess.IsShopRef(instance) || !_config.UsesExtractionPointButton)
+            if (!_config.Enabled.Value || ExtractionPointAccess.IsShopRef(instance))
             {
                 return;
             }
 
             if (!ExtractionPointAccess.StateIs(instance, ExtractionPoint.State.Active))
+            {
+                return;
+            }
+
+            if (_config.UsesShopPedestalButton)
+            {
+                _placementService.RefreshPlacementOnActivation(instance);
+            }
+
+            if (!_config.UsesExtractionPointButton)
             {
                 return;
             }
@@ -251,7 +265,8 @@ namespace ExtractionButtonMod.Services
 
         /// <summary>
         /// Animates the physical extraction machine button press during <see cref="ExtractionPoint.State.Success"/>
-        /// and <see cref="ExtractionPoint.State.Cancel"/> (where <c>StateActive</c>'s animation loop is inactive).
+        /// and <see cref="ExtractionPoint.State.Cancel"/> (where <c>StateActive</c>'s animation loop is inactive),
+        /// and resolves pedestal placement once procedural level generation finishes.
         /// </summary>
         /// <param name="instance">The <see cref="ExtractionPoint"/> instance.</param>
         public void UpdateConfirmationButtonAnimation(ExtractionPoint instance)
@@ -259,6 +274,11 @@ namespace ExtractionButtonMod.Services
             if (!_config.Enabled.Value || ExtractionPointAccess.IsShopRef(instance))
             {
                 return;
+            }
+
+            if (_config.UsesShopPedestalButton)
+            {
+                _placementService.EnsurePlacementResolved(instance);
             }
 
             if (ExtractionPointAccess.StateIs(instance, ExtractionPoint.State.Active))
