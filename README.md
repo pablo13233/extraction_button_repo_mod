@@ -8,8 +8,8 @@
 
 ## 🇬🇧 English
 
-* 🐛 **Feedback & Bug Reports (GitHub):** [https://github.com/pablo13233/extraction_button_repo_mod/tree/main](https://github.com/pablo13233/extraction_button_repo_mod/tree/main) — Feel free to share feedback or report any bugs/issues you find!
-* ☕ **Donations & Support (Ko-fi):** [https://ko-fi.com/pablo13233](https://ko-fi.com/pablo13233) — If you enjoy the mod and want to support its development, donations are greatly appreciated!
+* 🐛 **Feedback & Bug Reports (GitHub):** [https://github.com/pablo13233/extraction_button_repo_mod/discussions](github-discussions) — Feel free to share feedback or report any bugs/issues you find!
+* ☕ **Donations & Support (Ko-fi):** [https://ko-fi.com/pablo13233](pablo13233) — If you enjoy the mod and want to support its development, donations are greatly appreciated!
 
 Tired of the extraction platform triggering automatically right when you were about to put more valuables inside?
 
@@ -39,7 +39,7 @@ Tired of the extraction platform triggering automatically right when you were ab
 
 ## 🇪🇸 Español
 
-* 🐛 **Feedback y reporte de errores (GitHub):** [https://github.com/pablo13233/extraction_button_repo_mod/tree/main](https://github.com/pablo13233/extraction_button_repo_mod/tree/main) — ¡Aquí puedes dejar tus comentarios, sugerencias o reportar cualquier error que hayas encontrado!
+* 🐛 **Feedback y reporte de errores (GitHub):** [https://github.com/pablo13233/extraction_button_repo_mod/discussions](https://github.com/pablo13233/extraction_button_repo_mod/discussions) — ¡Aquí puedes dejar tus comentarios, sugerencias o reportar cualquier error que hayas encontrado!
 * ☕ **Donaciones y apoyo (Ko-fi):** [https://ko-fi.com/pablo13233](https://ko-fi.com/pablo13233) — Si te gusta el mod y deseas apoyar su desarrollo, ¡cualquier donación se agradece muchísimo!
 
 ¿Cansado de que la plataforma de extracción se active sola justo cuando ibas a meter más objetos valiosos?
