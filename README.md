@@ -8,8 +8,8 @@
 
 ## 🇬🇧 English
 
-* 🐛 **Feedback & Bug Reports (GitHub):** [https://github.com/pablo13233/extraction_button_repo_mod/discussions](github-discussions) — Feel free to share feedback or report any bugs/issues you find!
-* ☕ **Donations & Support (Ko-fi):** [https://ko-fi.com/pablo13233](pablo13233) — If you enjoy the mod and want to support its development, donations are greatly appreciated!
+* 🐛 **Feedback & Bug Reports (GitHub):** [GitHub Discussions](https://github.com/pablo13233/extraction_button_repo_mod/discussions) — Feel free to share feedback or report any bugs/issues you find!
+* ☕ **Donations & Support (Ko-fi):** [pablo13233](https://ko-fi.com/pablo13233) — If you enjoy the mod and want to support its development, donations are greatly appreciated!
 
 Tired of the extraction platform triggering automatically right when you were about to put more valuables inside?
 
@@ -39,8 +39,8 @@ Tired of the extraction platform triggering automatically right when you were ab
 
 ## 🇪🇸 Español
 
-* 🐛 **Feedback y reporte de errores (GitHub):** [https://github.com/pablo13233/extraction_button_repo_mod/discussions](https://github.com/pablo13233/extraction_button_repo_mod/discussions) — ¡Aquí puedes dejar tus comentarios, sugerencias o reportar cualquier error que hayas encontrado!
-* ☕ **Donaciones y apoyo (Ko-fi):** [https://ko-fi.com/pablo13233](https://ko-fi.com/pablo13233) — Si te gusta el mod y deseas apoyar su desarrollo, ¡cualquier donación se agradece muchísimo!
+* 🐛 **Feedback y reporte de errores (GitHub):** [GitHub Discussions](https://github.com/pablo13233/extraction_button_repo_mod/discussions) — ¡Aquí puedes dejar tus comentarios, sugerencias o reportar cualquier error que hayas encontrado!
+* ☕ **Donaciones y apoyo (Ko-fi):** [pablo13233](https://ko-fi.com/pablo13233) — Si te gusta el mod y deseas apoyar su desarrollo, ¡cualquier donación se agradece muchísimo!
 
 ¿Cansado de que la plataforma de extracción se active sola justo cuando ibas a meter más objetos valiosos?
 
@@ -57,7 +57,7 @@ Tired of the extraction platform triggering automatically right when you were ab
 ### Multijugador (Host-Only vs. Clientes)
 
 * **Funciona como *Host-Only*:** Si solo el anfitrión (*Host*) tiene el mod instalado, la partida funciona sin problemas para todos: la plataforma no se enviará sola y el **Host** será quien pueda presionar el botón para confirmar la extracción.
-* **Recomendado para todos los jugadores (*Client-Side*):** Se recomienda que tus amigos también lo instalen para que **todos vean el botón de confirmación activo y cualquier miembro del equipo pueda presionarlo** (si solo lo tiene el Host, únicamente el Host podrá accionar el botón).
+* **Recomendado para todos los jugadores (*Client-Side*):** Se recomienda que tus amigos también instalen el mod para que **todos vean el botón de confirmación activo y cualquier miembro del equipo pueda presionarlo** (si solo lo tiene el Host, únicamente el Host podrá accionar el botón).
 
 ### Información adicional e incompatibilidades
 
