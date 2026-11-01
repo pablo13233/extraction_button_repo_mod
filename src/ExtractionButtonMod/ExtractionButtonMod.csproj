@@ -1,0 +1,78 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <AssemblyName>ExtractionButtonMod</AssemblyName>
+    <RootNamespace>ExtractionButtonMod</RootNamespace>
+    <Version>1.0.0</Version>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DisableImplicitFrameworkReferences>true</DisableImplicitFrameworkReferences>
+    <NuGetAudit>false</NuGetAudit>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="$(RepoManagedDir)\mscorlib.dll">
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="netstandard">
+      <HintPath>$(RepoManagedDir)\netstandard.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="$(RepoManagedDir)\System.dll">
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="$(RepoManagedDir)\System.Core.dll">
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="0Harmony">
+      <HintPath>$(BepInExCoreDir)\0Harmony.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="BepInEx">
+      <HintPath>$(BepInExCoreDir)\BepInEx.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>$(RepoManagedDir)\Assembly-CSharp.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>$(RepoManagedDir)\UnityEngine.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>$(RepoManagedDir)\UnityEngine.CoreModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>$(RepoManagedDir)\UnityEngine.PhysicsModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AudioModule">
+      <HintPath>$(RepoManagedDir)\UnityEngine.AudioModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="PhotonUnityNetworking">
+      <HintPath>$(RepoManagedDir)\PhotonUnityNetworking.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="PhotonRealtime">
+      <HintPath>$(RepoManagedDir)\PhotonRealtime.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+  <Target Name="DeployToBepInExPlugins" AfterTargets="Build" Condition="'$(DeployToProfile)' == 'true' And Exists('$(BepInExPluginsDir)')">
+    <PropertyGroup>
+      <PluginTargetDir>$(BepInExPluginsDir)\$(AssemblyName)</PluginTargetDir>
+    </PropertyGroup>
+    <MakeDir Directories="$(PluginTargetDir)" />
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(PluginTargetDir)" SkipUnchangedFiles="true" />
+    <Message Importance="High" Text="[ExtractionButtonMod] Deployed $(TargetFileName) -> $(PluginTargetDir)" />
+  </Target>
+
+</Project>
